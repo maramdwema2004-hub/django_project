@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Information</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+            margin: 0;
+            padding: 50px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px #cccccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #34495e;
+        }
+
+        p {
+            color: #444444;
+            font-size: 16px;
+            padding: 10px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        strong {
+            color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>My Profile</h1>
+
+    <p><strong>Full Name:</strong> {{ full_name  | capfirst| add:' Dwema' }}</p>
+    <p><strong>Student ID:</strong> {{ student_id |stringformat:'s' }}</p>
+    <p><strong>Address:</strong> {{ address |upper }}</p>
+    <p><strong>Email:</strong> {{ email | default:'maram@gmail.com' }}</p>
+    <p><strong>Major:</strong> {{ major }}</p>
+    
+
+    </div>
+
+</body>
+</html>
